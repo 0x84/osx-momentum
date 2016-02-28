@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0354060A1C8369CB005D98A0 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 035406091C8369CB005D98A0 /* res */; };
+		03DC9B821C7F747300D117B1 /* clockView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DC9B811C7F747300D117B1 /* clockView.h */; };
+		03DC9B841C7F747300D117B1 /* clockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC9B831C7F747300D117B1 /* clockView.m */; };
+		03F0662F1C82FAEB00CAA0E1 /* Options.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F0662E1C82FAEB00CAA0E1 /* Options.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		035406091C8369CB005D98A0 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		03DC9B7E1C7F747300D117B1 /* Momentum.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Momentum.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DC9B811C7F747300D117B1 /* clockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = clockView.h; path = ../src/clockView.h; sourceTree = "<group>"; };
+		03DC9B831C7F747300D117B1 /* clockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = clockView.m; path = ../src/clockView.m; sourceTree = "<group>"; };
+		03DC9B851C7F747300D117B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../src/Info.plist; sourceTree = "<group>"; };
+		03F0662E1C82FAEB00CAA0E1 /* Options.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Options.xib; path = ../src/Options.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03DC9B7A1C7F747300D117B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03DC9B741C7F747300D117B1 = {
+			isa = PBXGroup;
+			children = (
+				035406091C8369CB005D98A0 /* res */,
+				03DC9B801C7F747300D117B1 /* src */,
+				03DC9B7F1C7F747300D117B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03DC9B7F1C7F747300D117B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03DC9B7E1C7F747300D117B1 /* Momentum.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03DC9B801C7F747300D117B1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				03DC9B811C7F747300D117B1 /* clockView.h */,
+				03DC9B831C7F747300D117B1 /* clockView.m */,
+				03DC9B851C7F747300D117B1 /* Info.plist */,
+				03F0662E1C82FAEB00CAA0E1 /* Options.xib */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		03DC9B7B1C7F747300D117B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DC9B821C7F747300D117B1 /* clockView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		03DC9B7D1C7F747300D117B1 /* Momentum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03DC9B881C7F747300D117B1 /* Build configuration list for PBXNativeTarget "Momentum" */;
+			buildPhases = (
+				03DC9B791C7F747300D117B1 /* Sources */,
+				03DC9B7A1C7F747300D117B1 /* Frameworks */,
+				03DC9B7B1C7F747300D117B1 /* Headers */,
+				03DC9B7C1C7F747300D117B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Momentum;
+			productName = clock;
+			productReference = 03DC9B7E1C7F747300D117B1 /* Momentum.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03DC9B751C7F747300D117B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Dylan;
+				TargetAttributes = {
+					03DC9B7D1C7F747300D117B1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 03DC9B781C7F747300D117B1 /* Build configuration list for PBXProject "Momentum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 03DC9B741C7F747300D117B1;
+			productRefGroup = 03DC9B7F1C7F747300D117B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03DC9B7D1C7F747300D117B1 /* Momentum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03DC9B7C1C7F747300D117B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F0662F1C82FAEB00CAA0E1 /* Options.xib in Resources */,
+				0354060A1C8369CB005D98A0 /* res in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03DC9B791C7F747300D117B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DC9B841C7F747300D117B1 /* clockView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		03DC9B861C7F747300D117B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		03DC9B871C7F747300D117B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		03DC9B891C7F747300D117B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = src/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_BUNDLE_IDENTIFIER = osx.0x84.clock;
+				PRODUCT_NAME = Momentum;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		03DC9B8A1C7F747300D117B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = src/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_BUNDLE_IDENTIFIER = osx.0x84.clock;
+				PRODUCT_NAME = Momentum;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03DC9B781C7F747300D117B1 /* Build configuration list for PBXProject "Momentum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DC9B861C7F747300D117B1 /* Debug */,
+				03DC9B871C7F747300D117B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03DC9B881C7F747300D117B1 /* Build configuration list for PBXNativeTarget "Momentum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DC9B891C7F747300D117B1 /* Debug */,
+				03DC9B8A1C7F747300D117B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03DC9B751C7F747300D117B1 /* Project object */;
+}

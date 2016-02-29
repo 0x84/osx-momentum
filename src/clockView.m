@@ -29,7 +29,7 @@
     [super startAnimation];
     
     [_webView setMainFrameURL:[NSString stringWithFormat:@"file://%@/res/dashboard.html", [[NSBundle bundleForClass:[self class]] resourcePath]]];
-    [_webView setFrameLoadDelegate: self];
+    [_webView setFrameLoadDelegate: (id)self];
     [_webView setShouldUpdateWhileOffscreen:YES];
     [_webView setDrawsBackground:NO];
     [_webView setAlphaValue:0.0];

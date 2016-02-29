@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03296C561C83FB4A00BD66F6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 03296C551C83FB4A00BD66F6 /* README.md */; };
 		0354060A1C8369CB005D98A0 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 035406091C8369CB005D98A0 /* res */; };
 		03DC9B821C7F747300D117B1 /* clockView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DC9B811C7F747300D117B1 /* clockView.h */; };
 		03DC9B841C7F747300D117B1 /* clockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC9B831C7F747300D117B1 /* clockView.m */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03296C551C83FB4A00BD66F6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		035406091C8369CB005D98A0 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		03DC9B7E1C7F747300D117B1 /* Momentum.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Momentum.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DC9B811C7F747300D117B1 /* clockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = clockView.h; path = ../src/clockView.h; sourceTree = "<group>"; };
@@ -36,6 +38,7 @@
 		03DC9B741C7F747300D117B1 = {
 			isa = PBXGroup;
 			children = (
+				03296C551C83FB4A00BD66F6 /* README.md */,
 				035406091C8369CB005D98A0 /* res */,
 				03DC9B801C7F747300D117B1 /* src */,
 				03DC9B7F1C7F747300D117B1 /* Products */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03296C561C83FB4A00BD66F6 /* README.md in Sources */,
 				03DC9B841C7F747300D117B1 /* clockView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,11 +238,15 @@
 		03DC9B891C7F747300D117B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = src/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = osx.0x84.clock;
 				PRODUCT_NAME = Momentum;
+				SWIFT_OBJC_BRIDGING_HEADER = "src/Momentum-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -246,11 +254,14 @@
 		03DC9B8A1C7F747300D117B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = src/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = osx.0x84.clock;
 				PRODUCT_NAME = Momentum;
+				SWIFT_OBJC_BRIDGING_HEADER = "src/Momentum-Bridging-Header.h";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;

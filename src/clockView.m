@@ -103,4 +103,15 @@
     [[configView windowScriptObject] evaluateWebScript:@"localStorage.clear();window.location.reload();"];
 }
 
+- (IBAction)hour12clock:(NSButton*)button
+{
+    if ([button state] == NSOnState) {
+        [[configView windowScriptObject]
+         evaluateWebScript:@"localStorage.hour12clock=true;window.location.reload();"];
+    } else {
+        [[configView windowScriptObject]
+         evaluateWebScript:@"localStorage.hour12clock=false;window.location.reload();"];
+    }
+}
+
 @end

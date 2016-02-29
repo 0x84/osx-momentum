@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03296C561C83FB4A00BD66F6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 03296C551C83FB4A00BD66F6 /* README.md */; };
+		032F9B311C84E3330090A48E /* version.js in Resources */ = {isa = PBXBuildFile; fileRef = 032F9B301C84E3330090A48E /* version.js */; };
 		0354060A1C8369CB005D98A0 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 035406091C8369CB005D98A0 /* res */; };
 		03DC9B821C7F747300D117B1 /* clockView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DC9B811C7F747300D117B1 /* clockView.h */; };
 		03DC9B841C7F747300D117B1 /* clockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC9B831C7F747300D117B1 /* clockView.m */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		03296C551C83FB4A00BD66F6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		032F9B301C84E3330090A48E /* version.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = version.js; sourceTree = "<group>"; };
 		035406091C8369CB005D98A0 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		03DC9B7E1C7F747300D117B1 /* Momentum.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Momentum.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DC9B811C7F747300D117B1 /* clockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = clockView.h; path = ../src/clockView.h; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 		03DC9B741C7F747300D117B1 = {
 			isa = PBXGroup;
 			children = (
+				032F9B301C84E3330090A48E /* version.js */,
 				03296C551C83FB4A00BD66F6 /* README.md */,
 				035406091C8369CB005D98A0 /* res */,
 				03DC9B801C7F747300D117B1 /* src */,
@@ -133,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F0662F1C82FAEB00CAA0E1 /* Options.xib in Resources */,
+				032F9B311C84E3330090A48E /* version.js in Resources */,
 				0354060A1C8369CB005D98A0 /* res in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

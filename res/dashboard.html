@@ -77,6 +77,11 @@
             <p><span>Hello, what&#8217;s your name?</span> <input type="text"></p>
         </script>
 
+        <script id="updater-template" type="text/x-handlebars-template">
+            <span><a href="{{homepage}}" target="_blank">Momentum</a> {{curr_ver}}</span>
+            {{#if has_new}}<br /><span><a href="{{download}}" target="_blank">The latest version is {{new_ver}}</a></span>{{/if}}
+        </script>
+
         <!-- Libraries -->
         <script src="js/jquery.min.js"></script>
         <script src="js/underscore-min.js"></script>
@@ -95,6 +100,7 @@
         <script src="app/message.js"></script>
         <!-- This goes last -->
         <script src="app/main.js"></script>
+        <script src="app/update.js?v=0.2"></script>
 
     </body>
 </html>

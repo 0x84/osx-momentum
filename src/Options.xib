@@ -52,6 +52,17 @@
                             <action selector="resetOperation:" target="-2" id="95i-MR-Pky"/>
                         </connections>
                     </button>
+                    <button id="j8w-zO-0X7">
+                        <rect key="frame" x="18" y="10" width="164" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Use a 12-hour clock" bezelStyle="regularSquare" imagePosition="left" inset="2" id="icr-iV-g2j">
+                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="hour12clock:" target="-2" id="Cf1-cE-G36"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <connections>

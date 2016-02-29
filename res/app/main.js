@@ -1,10 +1,10 @@
 // Momentum Dashboard Page Script
 
 m.isValidDate = function isValidDate(d) {
-  if ( Object.prototype.toString.call(d) !== "[object Date]" ) {
-    return false;
-  }
-  return !isNaN(d.getTime());
+    if ( Object.prototype.toString.call(d) !== "[object Date]" ) {
+        return false;
+    }
+    return !isNaN(d.getTime());
 };
 
 function isFullScreen() {
@@ -15,40 +15,18 @@ function isFullScreen() {
             (window.innerWidth == screen.width && window.innerHeight == screen.height));
 }
 
-function isPreview() {
-    return (!isFullScreen() &&
-            window.innerWidth == window.outerWidth &&
-            window.innerHeight == window.outerHeight);
-}
-
-function versionCompare(c, d) {
-    if (typeof c + typeof d != 'stringstring') return false;
-    var a = c.split('.'),
-        b = d.split('.'),
-        i = 0,
-        len = Math.max(a.length, b.length);
-    for (; i < len; i++) {
-        if ((a[i] && !b[i] && parseInt(a[i]) > 0) || (parseInt(a[i]) > parseInt(b[i]))) {
-            return 1;
-        } else if ((b[i] && !a[i] && parseInt(b[i]) > 0) || (parseInt(a[i]) < parseInt(b[i]))) {
-            return -1;
-        }
-    }
-    return 0;
-}
-
 function isNewDay(date) {
-  var today = new Date(localStorage.today);
+    var today = new Date(localStorage.today);
 
-  if ((today.getDate() !== date.getDate() && date.getHours() >= 5) || (today.getDate() == date.getDate() && date.getHours() >= 5 && today.getHours() < 5)) {
-    return true;
-  }
+    if ((today.getDate() !== date.getDate() && date.getHours() >= 5) || (today.getDate() == date.getDate() && date.getHours() >= 5 && today.getHours() < 5)) {
+        return true;
+    }
 
-  return false;
+    return false;
 }
 
 function isDateInFuture(date) {
-  return Date.parse(date) > Date.parse(new Date());
+    return Date.parse(date) > Date.parse(new Date());
 }
 
 function ensureLocalStorageDatesAreValid() {
@@ -128,6 +106,7 @@ m.views.CenterClock = Backbone.View.extend({
         this.$el[order]('#' + this.options.region).html(this.template(variables)).css('opacity', 1);
         this.$time = this.$('.time');
         this.$format = this.$('.format');
+        if (this.model.get('hour12clock')) this.$format.addClass('show');
     },
     toggleFormat: function () {
         var hour12clock = !this.model.get('hour12clock');
@@ -276,10 +255,6 @@ m.views.AppReturn = Backbone.View.extend({
     },
     clicked: function (e) {
         e.preventDefault();
-//        ga('send', 'event', 'Meta', 'Back to Apps');
-        chrome.tabs.update({
-            url:'chrome://apps'
-        });
     }
 });
 */
@@ -288,10 +263,9 @@ m.views.AppReturn = Backbone.View.extend({
 m.views.Dashboard = Backbone.View.extend({
     initialize: function () {
         $("html").on('contextmenu', function() {return false;});
+        // for screen saver options
         if (!isFullScreen()) {
-            $(["bottom"]).each(function(k, v) {
-                $("#"+v).hide();
-            });
+            $(["bottom"]).each(function(k, v) { $("#"+v).hide(); });
             $(document.body).css({ 'zoom': 0.3 });
         }
 
@@ -311,9 +285,9 @@ m.views.Dashboard = Backbone.View.extend({
         m.collect.backgrounds.fetch({async: false});
 
         m.views.background = new m.views.Background({
-          collection: m.collect.backgrounds,
-          model: m.models.date,
-          region: 'background'
+            collection: m.collect.backgrounds,
+            model: m.models.date,
+            region: 'background'
         });
 
         if (!localStorage.name) {
@@ -324,26 +298,26 @@ m.views.Dashboard = Backbone.View.extend({
         this.render();
 
         window.addEventListener('storage', function (e) {
-          switch (e.key) {
-            case "background":
-              m.trigger('newDay');
-              break;
-          }
+            switch (e.key) {
+                case "background":
+                    m.trigger('newDay');
+                    break;
+            }
         });
 
         ensureLocalStorageDatesAreValid();
 
         this.dateIntervalId = setInterval(function () {
-          m.models.date.set('date', new Date());
+            m.models.date.set('date', new Date());
         }, 100);
 
         this.newDayIntervalId = setInterval(function () {
-          var date = m.models.date.get('date');
-          if (isNewDay(date)) {
-            localStorage.today = date;
-            m.trigger('newDay');
-          }
-          ensureLocalStorageDatesAreValid();
+            var date = m.models.date.get('date');
+            if (isNewDay(date)) {
+                localStorage.today = date;
+                m.trigger('newDay');
+            }
+            ensureLocalStorageDatesAreValid();
         }, 200);
     },
 
@@ -377,13 +351,24 @@ m.views.Dashboard = Backbone.View.extend({
                 m.views.shortQuote = new m.views.ShortQuote({ collection: m.collect.shortquotes, model: m.models.date, region: 'bottom' });
             },
             error: function (errorResponse) {
-                   console.log(errorResponse);
+                console.log(errorResponse);
             }
         });
 
         m.models.weather = new m.models.Weather({ id: 1 });
         m.models.weather.fetch();
         m.views.weather = new m.views.Weather({ model: m.models.weather, region: 'top-right', order: 'append' });
+
+        if (!isFullScreen()) {
+            m.models.updater = new m.models.Updater();
+            m.collect.updater = new m.collect.Updater();
+            m.collect.updater.fetch({
+                success: function(resp, xhr) {
+                    m.views.updater = new m.views.Updater({ collection: m.collect.updater, model: m.models.updater, region: 'top-left' });
+                },
+                error: function(resp) { console.log(resp); }
+            });
+        }
     }
 });
 

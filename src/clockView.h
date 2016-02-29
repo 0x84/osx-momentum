@@ -20,6 +20,7 @@
 - (NSWindow*)configureSheet;
 - (IBAction)cancelOperation:(id)sender;
 - (IBAction)resetOperation:(id)sender;
+- (IBAction)hour12clock:(NSButton*)button;
 
 @end
 

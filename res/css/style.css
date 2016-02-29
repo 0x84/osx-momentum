@@ -35,6 +35,7 @@ a:hover { opacity: 1; }
 .background-overlay { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 2; background: url('../img/vignette.png'); background-size: 100% 100%; opacity: 0; }
 
 /* Widgets */
+.updater { display: inline-block; margin: 14px 0 0 20px; }
 
 .metric { display: inline-block; margin: 14px 20px 0 0; cursor: default; text-align: right; }
 	.metric-stat { display: block; position: relative; margin-left: 5px; font-size: 150%; line-height: 1.1em; }
@@ -45,7 +46,8 @@ a:hover { opacity: 1; }
 
 	#centerclock { display: inline-block; position: relative; opacity: 0; }
 	#centerclock .format { position: absolute; left: 102%; bottom: 9%; font-size: 25px; opacity: 0; }
-	#centerclock .show { opacity: 1; -webkit-animation: fadeout 4s ease 4s 1 normal; -webkit-animation-fill-mode: forwards; }
+	#centerclock .show { opacity: 1; -webkit-animation: format_show 4s ease 4s 1 normal; -webkit-animation-fill-mode: forwards; }
+    @keyframes format_show { from { opacity: 1 } to { opacity: 0.5 } }
 	#centerclock h1 { cursor: default; -webkit-user-select: none; }
 
 	#centerclock h1, #greeting h2, #introduction, #focus { text-align: center; line-height: 1; padding: 0; margin: 0; color: #fff; letter-spacing: -5px; font-size: 180px; font-weight: lighter; }

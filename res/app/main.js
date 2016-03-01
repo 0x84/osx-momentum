@@ -106,7 +106,7 @@ m.views.CenterClock = Backbone.View.extend({
         this.$el[order]('#' + this.options.region).html(this.template(variables)).css('opacity', 1);
         this.$time = this.$('.time');
         this.$format = this.$('.format');
-        if (this.model.get('hour12clock')) this.$format.addClass('show');
+        if (this.model.get('hour12clock')) this.$format.html(this.model.getTimePeriod()).addClass('show');
     },
     toggleFormat: function () {
         var hour12clock = !this.model.get('hour12clock');
